@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1D1B20"
+    android:backgroundTint="#1D1B20"
+    tools:context=".aqua_frame"
+    tools:ignore="HardcodedText,ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" >
+
+
+<TextView
+        android:id="@+id/DEEP"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/amethysta"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/deep"
+        android:textAlignment="center"
+        android:textSize="96sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck"
+        tools:text="DEEP" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backgroundBTN"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:backgroundTint="#242228"
+        android:clickable="false"
+        android:fontFamily="@font/amethysta"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/back_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DEEP"
+        app:layout_constraintVertical_bias="0.25"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backgroundBTN2"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:alpha="0.3"
+        android:backgroundTint="#35313A"
+        android:clickable="false"
+        android:fontFamily="@font/amethysta"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/amethysta"
+        android:text="Для дайверов"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DEEP"
+        tools:ignore="TextSizeCheck"
+        tools:text="Для дайверов" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/decomp"
+        android:layout_width="300dp"
+
+        android:layout_height="60dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/amethysta"
+        android:onClick="startDecompressActivity"
+        android:text="🤿 Расчёт режимов декомпресии"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundBTN"
+        app:layout_constraintStart_toStartOf="@+id/backgroundBTN"
+        app:layout_constraintTop_toTopOf="@+id/backgroundBTN" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/oxygent"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/amethysta"
+        android:onClick="startOxygenActivity"
+        android:text="🫁 Расчёт баллонов с кислородом"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundBTN"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundBTN"
+        app:layout_constraintStart_toStartOf="@+id/backgroundBTN" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_btn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/amethysta"
+        android:onClick="startMainActivity"
+        android:text="Назад"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundBTN2"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundBTN2"
+        app:layout_constraintStart_toStartOf="@+id/backgroundBTN2"
+        app:layout_constraintTop_toTopOf="@+id/backgroundBTN2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

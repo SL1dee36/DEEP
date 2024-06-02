@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DEEP" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Установка цвета верхней панели -->
+        <item name="colorPrimary">#000000</item>
+        <!-- Установка цвета кнопки и текста кнопки -->
+        <item name="colorButtonNormal">#808080</item>
+        <item name="android:buttonTint">#FFFFFF</item>
+        <!-- Установка фона и цвета текста -->
+        <item name="android:windowBackground">#000000</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Theme.DEEP" parent="Base.Theme.DEEP" />
+</resources>
