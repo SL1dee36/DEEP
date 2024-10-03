@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ButtonStyle" parent="@android:style/Widget.Button">
+    <item name="android:layout_width">fill_parent</item>
+    <item name="android:textColor">@color/white</item>
+    <item name="android:textSize">15sp</item>
+    <item name="android:padding">10dp</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:buttonCornerRadius">12dp</item>
+    <item name="android:background">@color/cardview_dark_background</item>
+    <item name="android:backgroundTint">@color/cardview_dark_background</item>
+    <item name="android:gravity">center</item>
+    </style>
+</resources>

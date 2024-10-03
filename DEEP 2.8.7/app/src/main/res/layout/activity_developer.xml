@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1D1B20"
+    tools:context=".developer"
+    tools:ignore="HardcodedText,ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" >
+
+
+
+<VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backgroundBTN2"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:alpha="0.3"
+        android:backgroundTint="#35313A"
+        android:clickable="false"
+        android:fontFamily="@font/amethysta"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_btn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/amethysta"
+        android:onClick="startMainActivity"
+        android:text="@string/backButton"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundBTN2"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundBTN2"
+        app:layout_constraintStart_toStartOf="@+id/backgroundBTN2"
+        app:layout_constraintTop_toTopOf="@+id/backgroundBTN2" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="monospace"
+        android:text="product version 2.8.7"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:typeface="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="monospace"
+        android:text="Kotlin разработчик: Назарян Артём\nJava разработчик: Малахов Олег\nТестировшик: Григорьев Никита"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/backgroundBTN2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">  <!-- Добавлено отступы -->
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="Список изменений:\n\n1. Запрос разрешений: Теперь приложение корректно запрашивает разрешение на доступ к местоположению. Ранее приложение могло пытаться получить местоположение без необходимых разрешений, что приводило к ошибкам.\n\n
+2. Определение местоположения: Улучшен механизм определения местоположения. Теперь приложение использует как GPS, так и данные сети для получения более точных и надежных координат.  Это должно уменьшить количество случаев, когда местоположение не определялось или определялось некорректно.\n\n
+3. Геокодирование (преобразование координат в адрес):  Улучшена обработка ошибок при преобразовании координат в название страны и города.  Если адрес не удается определить, приложение теперь отображает понятное сообщение об ошибке, вместо того чтобы просто не показывать информацию.\n\n
+4. Обработка ошибок: В целом, обработка ошибок в коде определения местоположения была значительно улучшена. Теперь приложение более устойчиво к различным ошибкам и предоставляет пользователям более информативные сообщения о проблемах.  Это поможет нам быстрее диагностировать и исправлять любые оставшиеся проблемы.\n\n
+5. Удаление неиспользуемого кода: Удален неиспользуемый код, связанный с определением местоположения по сотовым вышкам, который мог вызывать путаницу и потенциальные проблемы."
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
