@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/deep_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DEEP"
+        tools:targetApi="33">
+        <!-- MAIN MENU -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN"
+                    android:screenOrientation="portrait" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mine"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DEEP" />
+        <activity
+            android:name=".Details"
+            android:exported="false"
+            android:label="@string/title_activity_details"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DEEP" />
+        <activity
+            android:name=".Image"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DEEP" />
+        <activity
+            android:name=".Adapter"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".AdapterDetails"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".AdapterImages"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".handbook"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".OxygenFrameActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DecompressionFrameActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".developer"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CompassFrameActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".aqua_frame"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
