@@ -1,7 +1,4 @@
 # DEEP
 DEEP - A program for cell phones, a pocket assistant for divers and sappers. 
 
-Video demonstration:
-
-https://github.com/SL1dee36/DEEP/assets/84046495/57015dc2-4388-42e6-98c5-e00054e48fbf
-
+![image](https://github.com/user-attachments/assets/8595a560-6c0f-4059-a98f-046acd5b2d4f)
