@@ -1,0 +1,27 @@
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="light_background">#F8F8F8</color>  <!-- Очень светло-серый -->
+    <color name="light_button">#EEEEEE</color>     <!-- Светло-серый -->
+    <color name="light_text">#212121</color>      <!-- Темно-серый для текста на светлом фоне -->
+
+
+    <color name="dark_background">#121212</color> <!-- Очень темный серый -->
+    <color name="dark_button">#242424</color>    <!-- Темно-серый -->
+    <color name="dark_text">#EEEEEE</color>       <!-- Светло-серый для текста на темном фоне -->
+
+    <!-- Дополнительные цвета, если понадобятся -->
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#0000FF</color>
+
+    <color name="light_text_secondary">#757575</color> <!-- Более светлый серый для второстепенного текста -->
+    <color name="light_surface_variant">#DDDDDD</color>
+    <color name="light_status_bar">#EEEEEE</color>
+
+    <color name="dark_text_secondary">#757575</color>  <!-- Более темный серый для второстепенного текста -->
+    <color name="dark_surface_variant">#222222</color>
+    <color name="dark_status_bar">#121212</color>
+
+</resources>
