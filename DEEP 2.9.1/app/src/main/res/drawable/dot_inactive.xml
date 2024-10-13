@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#80FFFFFF" />  <!-- Semi-transparent white or your desired inactive color -->
+    <size
+        android:width="12dp"
+        android:height="12dp" />  <!-- Same size as active dot -->
+</shape>
