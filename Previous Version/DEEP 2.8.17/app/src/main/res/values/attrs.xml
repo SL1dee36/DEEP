@@ -1,4 +1,0 @@
-<resources>
-    <attr name="buttonBackgroundColor" format="color" />
-    <attr name="buttonTextColor" format="color" />
-</resources>
