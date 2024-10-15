@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1D1B20"
+    tools:context=".developer"
+    tools:ignore="HardcodedText,ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" >
+
+
+
+<VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backgroundBTN2"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:alpha="0.3"
+        android:backgroundTint="#35313A"
+        android:clickable="false"
+        android:fontFamily="@font/amethysta"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_btn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/amethysta"
+        android:onClick="startMainActivity"
+        android:text="@string/backButton"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundBTN2"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundBTN2"
+        app:layout_constraintStart_toStartOf="@+id/backgroundBTN2"
+        app:layout_constraintTop_toTopOf="@+id/backgroundBTN2" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="monospace"
+        android:text="product version 2.9.1"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:typeface="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="monospace"
+        android:text="Kotlin разработчик: Назарян Артём\nJava разработчик: Малахов Олег\nТестировшик: Григорьев Никита"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/backgroundBTN2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">  <!-- Добавлено отступы -->
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="
+\nСписок изменений:\n\n
+Добавлено: Функция проверки обновлений. Теперь приложение может самостоятельно проверять наличие новых версий на GitHub и уведомлять пользователя о доступных обновлениях.\n\n
+Добавлено: Диалоговое окно с предложением обновить приложение, если найдена более новая версия. При нажатии 'Обновить' пользователь перенаправляется на страницу релизов GitHub.\n\n
+Улучшено: Управление версиями приложения. Теперь версия приложения (versionCode и versionName) хранится в отдельных переменных в файле build.gradle для более удобного управления и обновления. Убрано использование versionNameSuffix, которое приводило к некорректному формированию номера версии.\n\n
+Добавлено: Логика для предотвращения повторного показа диалога обновления для одной и той же версии. Информация о последней проверенной версии хранится в SharedPreferences.\n\n
+Улучшено: Обработка ошибок при проверке обновлений и получении текущей версии приложения.
+\n\nКислородные баллоны\n1. Добавлены рекомендации по безопасности\n2. Дополнительные расчеты:\n - Потребление воздуха на минуту.\n - Общее количество минут работы.\n3. Уточненные данные:\n - Автоматическое ограничение объема воздуха до доступного объема баллона.
+\n\nПанель декомпрессии\n1. Добавленна информационная панель\n2. Генератор случайных глубин. Теперь при запуске будут генерироваться случайные параметры глубины и времени работ.
+
+"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
