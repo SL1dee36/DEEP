@@ -1,5 +1,6 @@
-package com.example.deep
+package com.example.deep.handbook
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -10,6 +11,7 @@ class handbook : AppCompatActivity() {
 
     private lateinit var binding: ActivityHandbookBinding
 
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -17,7 +19,7 @@ class handbook : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true) // Включаем кнопку "назад"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val webView: WebView = binding.webview
         webView.webViewClient = WebViewClient()
@@ -26,7 +28,7 @@ class handbook : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        onBackPressed() // Обрабатываем нажатие на кнопку "назад"
+        onBackPressed()
         return true
     }
 }

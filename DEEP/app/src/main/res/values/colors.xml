@@ -5,7 +5,7 @@
     <color name="light_background">#F8F8F8</color>  <!-- Очень светло-серый -->
     <color name="light_button">#EEEEEE</color>     <!-- Светло-серый -->
     <color name="light_text">#212121</color>      <!-- Темно-серый для текста на светлом фоне -->
-
+    <color name="light_white_text">#9D9D9D</color>
 
     <color name="dark_background">#121212</color> <!-- Очень темный серый -->
     <color name="dark_button">#242424</color>    <!-- Темно-серый -->
