@@ -42,6 +42,9 @@
             android:name=".developer"
             android:exported="false"/>
         <activity
+            android:name=".BarometerFrameActivity"
+            android:exported="false"/>
+        <activity
             android:name=".CompassFrameActivity"
             android:exported="false"/>
         <activity
