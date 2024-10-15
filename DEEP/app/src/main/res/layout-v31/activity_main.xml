@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1d1b20"
+    android:theme="@style/Theme.DEEP"
+    tools:context=".MainActivity"
+    tools:ignore="PxUsage,VisualLintButtonSize,HardcodedText,ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" >
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/TitleFrame"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#312E35"
+        android:clickable="false"
+        android:fontFamily="@font/amethysta"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck,VisualLintButtonSize,VisualLintOverlap" />
+
+    <TextView
+        android:id="@+id/DEEP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:fontFamily="@font/amethysta"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/deep"
+        android:textAlignment="center"
+        android:textSize="46sp"
+        app:layout_constraintBottom_toBottomOf="@+id/TitleFrame"
+        app:layout_constraintEnd_toEndOf="@+id/TitleFrame"
+        app:layout_constraintStart_toStartOf="@+id/TitleFrame"
+        app:layout_constraintTop_toTopOf="@+id/TitleFrame"
+        tools:ignore="TextSizeCheck"
+        tools:text="DEEP" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/developers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DEEP">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="0dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/locationButton"
+                android:layout_width="0dp"
+
+                android:layout_height="180dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:text="🌍 Проверить местоположение"
+                android:textSize="32px"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                app:backgroundTint="#312E35"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/compass"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="VisualLintButtonSize"
+                tools:text="Show Location" />
+
+
+            <ImageButton
+                android:id="@+id/refreshButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/relocate"
+                app:layout_constraintBottom_toBottomOf="@+id/locationButton"
+                app:layout_constraintEnd_toStartOf="@+id/copyButton"
+                app:layout_constraintTop_toTopOf="@+id/locationButton"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+            <ImageButton
+                android:id="@+id/copyButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/copytoclipboard"
+                app:layout_constraintBottom_toBottomOf="@+id/locationButton"
+                app:layout_constraintEnd_toEndOf="@+id/locationButton"
+                app:layout_constraintTop_toTopOf="@+id/locationButton"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/compass"
+                android:layout_width="0dp"
+
+
+                android:layout_height="180dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintWidth_percent="0.40"
+                android:onClick="startCompassActivity"
+                android:textColor="@color/white"
+                app:backgroundTint="#312E35"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="DuplicateClickableBoundsCheck,VisualLintButtonSize,VisualLintOverlap"
+                tools:text="compass" />
+
+            <ImageView
+                android:id="@+id/imStatic"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:onClick="startCompassActivity"
+                app:layout_constraintBottom_toBottomOf="@+id/compass"
+                app:layout_constraintEnd_toEndOf="@+id/compass"
+                app:layout_constraintStart_toStartOf="@+id/compass"
+                app:layout_constraintTop_toTopOf="@+id/compass"
+                app:srcCompat="@drawable/m_arrow"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <ImageView
+                android:id="@+id/imDinamic"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:onClick="startCompassActivity"
+                app:layout_constraintBottom_toBottomOf="@+id/compass"
+                app:layout_constraintEnd_toEndOf="@+id/compass"
+                app:layout_constraintStart_toStartOf="@+id/compass"
+                app:layout_constraintTop_toTopOf="@+id/compass"
+                app:srcCompat="@drawable/m_compass_black"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/aqua"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:onClick="startAquaActivity"
+                android:text="ПАНЕЛЬ ДАЙВЕРОВ"
+                android:textColor="@color/white"
+                android:textSize="32px"
+                app:backgroundTint="#312E35"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/handbook"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationButton"
+                tools:ignore="VisualLintButtonSize"
+                tools:text="aqua" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/handbook"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:gravity="end|center"
+
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="10dp"
+                android:onClick="startHandBookActivity"
+                android:text="Локальный\n      справочник"
+                android:textColor="@color/white"
+                app:backgroundTint="#312E35"
+                android:textSize="32px"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/locationButton"
+                app:layout_constraintTop_toBottomOf="@+id/locationButton"
+                tools:ignore="HardcodedText,VisualLintButtonSize"
+                tools:text="Локальный\n      справочник" />
+
+            <ImageView
+                android:id="@+id/Handbook_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/handbook"
+                app:layout_constraintEnd_toEndOf="@+id/handbook"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/handbook"
+                app:layout_constraintTop_toTopOf="@+id/handbook"
+                app:srcCompat="@drawable/notebook" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/OnlineHandbook"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="end|center"
+                android:onClick="startOnlineHandBookActivity"
+                android:text="Онлайн\n      справочник"
+                app:backgroundTint="#312E35"
+                app:cornerRadius="10dp"
+                android:textSize="32px"
+
+                app:layout_constraintStart_toEndOf="@+id/barometerButton"
+                app:layout_constraintTop_toBottomOf="@+id/aqua"
+                tools:ignore="VisualLintButtonSize" />
+
+            <ImageView
+                android:id="@+id/OnlineHandbook_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/OnlineHandbook"
+                app:layout_constraintEnd_toEndOf="@+id/OnlineHandbook"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/OnlineHandbook"
+                app:layout_constraintTop_toTopOf="@+id/OnlineHandbook"
+                app:srcCompat="@drawable/library" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/barometerButton"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="fill"
+                android:onClick="startBarometerActivity"
+                android:text="Барометр"
+                app:backgroundTint="#312E35"
+                app:cornerRadius="10dp"
+                android:textSize="32px"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aqua"
+                app:layout_constraintWidth_percent="0.35"
+                tools:ignore="PxUsage,VisualLintButtonSize" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/developers"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="startDeveloperActivity"
+        android:text="Разработчик"
+        android:textColor="@color/white"
+
+        android:textColorHighlight="#80312E35"
+        app:backgroundTint="#312E35"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/checkforupdates"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintButtonSize"
+        tools:text="developer" />
+
+    <ImageView
+        android:id="@+id/developers_img"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/developers"
+        app:layout_constraintEnd_toEndOf="@+id/developers"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/developers"
+        app:layout_constraintTop_toTopOf="@+id/developers"
+        app:srcCompat="@drawable/developer" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/checkforupdates"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="startCheckForUpdate"
+        android:text="Обновления"
+        android:textColor="@color/white"
+        android:textColorHighlight="#80312E35"
+
+        app:backgroundTint="#312E35"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="VisualLintButtonSize"
+        tools:text="checkforupdates" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
