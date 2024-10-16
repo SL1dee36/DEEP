@@ -1,4 +1,4 @@
-package com.example.deep
+package com.example.deep.diver
 
 import android.os.Bundle
 import android.view.View
@@ -7,6 +7,7 @@ import android.widget.RadioButton
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.deep.R
 import com.google.android.material.textfield.TextInputEditText
 import kotlin.math.roundToInt
 

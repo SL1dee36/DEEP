@@ -1,9 +1,10 @@
-package com.example.deep
+package com.example.deep.diver
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.deep.R
 
 class aqua_frame : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

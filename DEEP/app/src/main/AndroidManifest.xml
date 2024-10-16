@@ -33,10 +33,10 @@
             android:name=".handbook.handbook"
             android:exported="false"/>
         <activity
-            android:name=".OxygenFrameActivity"
+            android:name=".diver.OxygenFrameActivity"
             android:exported="false"/>
         <activity
-            android:name=".DecompressionFrameActivity"
+            android:name=".diver.DecompressionFrameActivity"
             android:exported="false" />
         <activity
             android:name=".developer"
@@ -48,7 +48,7 @@
             android:name=".CompassFrameActivity"
             android:exported="false"/>
         <activity
-            android:name=".aqua_frame"
+            android:name=".diver.aqua_frame"
             android:exported="false"/>
         <activity
             android:name=".handbook.MainActivityHandbook"

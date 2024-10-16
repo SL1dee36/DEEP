@@ -30,6 +30,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.deep.diver.aqua_frame
 import com.example.deep.handbook.MainActivityHandbook
 import com.example.deep.handbook.handbook
 import com.google.android.material.button.MaterialButton
@@ -108,6 +109,11 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     fun startDeveloperActivity(v: View) {
         val intent = Intent(this, developer::class.java)
+        startActivity(intent)
+    }
+
+    fun startBarometerActivity(v: View) {
+        val intent = Intent(this, BarometerFrameActivity::class.java)
         startActivity(intent)
     }
 
