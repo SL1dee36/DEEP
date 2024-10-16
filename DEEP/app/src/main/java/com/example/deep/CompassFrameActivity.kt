@@ -5,12 +5,14 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.location.Geocoder
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.RotateAnimation
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
 import java.util.Locale
 
@@ -27,6 +29,11 @@ class CompassFrameActivity : AppCompatActivity(), SensorEventListener {
         imDynamic = findViewById(R.id.compass_dynamic)
         sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
         geocoder = Geocoder(this, Locale.getDefault())
+
+        /*val videoView = findViewById<VideoView>(R.id.videoView)
+        videoView.setVideoURI(Uri.parse("android.resource://${packageName}/${R.raw.bgb}"))
+        videoView.start()
+        videoView.setOnPreparedListener { mp -> mp.isLooping = true }*/
 
     }
 

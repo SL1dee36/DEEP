@@ -7,52 +7,43 @@
     android:background="#1d1b20"
     android:theme="@style/Theme.DEEP"
     tools:context=".MainActivity"
-    tools:ignore="HardcodedText,ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" >
+    tools:ignore="PxUsage,VisualLintButtonSize,HardcodedText,ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" >
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/TitleFrame"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="60dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:backgroundTint="#29262D"
+        android:backgroundTint="#312E35"
         android:clickable="false"
         android:fontFamily="@font/amethysta"
         app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/DEEP"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/DEEP"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpeakableTextPresentCheck,VisualLintButtonSize,VisualLintOverlap" />
 
     <TextView
         android:id="@+id/DEEP"
-        android:layout_width="350dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
         android:fontFamily="@font/amethysta"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/deep"
         android:textAlignment="center"
-        android:textSize="96sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextSizeCheck"
-        tools:text="DEEP" />
-
-    <TextClock
-        android:id="@+id/textClock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
+        android:textSize="46sp"
         app:layout_constraintBottom_toBottomOf="@+id/TitleFrame"
         app:layout_constraintEnd_toEndOf="@+id/TitleFrame"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/TitleFrame"
         app:layout_constraintTop_toTopOf="@+id/TitleFrame"
-        app:layout_constraintVertical_bias="1.0" />
+        tools:ignore="TextSizeCheck"
+        tools:text="DEEP" />
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -79,6 +70,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="10dp"
                 android:text="🌍 Проверить местоположение"
+                android:textSize="32px"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 app:backgroundTint="#312E35"
@@ -175,6 +167,7 @@
                 android:onClick="startAquaActivity"
                 android:text="ПАНЕЛЬ ДАЙВЕРОВ"
                 android:textColor="@color/white"
+                android:textSize="32px"
                 app:backgroundTint="#312E35"
                 app:cornerRadius="10dp"
                 app:layout_constraintEnd_toStartOf="@+id/handbook"
@@ -187,20 +180,66 @@
                 android:id="@+id/handbook"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
+                android:gravity="end|center"
 
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="10dp"
                 android:onClick="startHandBookActivity"
-                android:text="СПРАВОЧНИК"
+                android:text="Локальный\n      справочник"
                 android:textColor="@color/white"
                 app:backgroundTint="#312E35"
+                android:textSize="32px"
                 app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/locationButton"
                 app:layout_constraintTop_toBottomOf="@+id/locationButton"
                 tools:ignore="HardcodedText,VisualLintButtonSize"
-                tools:text="handbook" />
+                tools:text="Локальный\n      справочник" />
+
+            <ImageView
+                android:id="@+id/Handbook_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/handbook"
+                app:layout_constraintEnd_toEndOf="@+id/handbook"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/handbook"
+                app:layout_constraintTop_toTopOf="@+id/handbook"
+                app:srcCompat="@drawable/notebook" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/OnlineHandbook"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="end|center"
+                android:onClick="startOnlineHandBookActivity"
+                android:text="Онлайн\n      справочник"
+                app:backgroundTint="#312E35"
+                app:cornerRadius="10dp"
+                android:textSize="32px"
+
+                app:layout_constraintStart_toEndOf="@+id/barometerButton"
+                app:layout_constraintTop_toBottomOf="@+id/aqua"
+                tools:ignore="VisualLintButtonSize" />
+
+            <ImageView
+                android:id="@+id/OnlineHandbook_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/OnlineHandbook"
+                app:layout_constraintEnd_toEndOf="@+id/OnlineHandbook"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/OnlineHandbook"
+                app:layout_constraintTop_toTopOf="@+id/OnlineHandbook"
+                app:srcCompat="@drawable/library" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/barometerButton"
@@ -208,18 +247,17 @@
                 android:layout_height="120dp"
                 android:layout_marginHorizontal="10dp"
                 android:gravity="fill"
-                android:text="Барометр"
                 android:onClick="startBarometerActivity"
+                android:text="Барометр"
                 app:backgroundTint="#312E35"
                 app:cornerRadius="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="32px"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/aqua"
-                app:layout_constraintVertical_bias="0.5"
                 app:layout_constraintWidth_percent="0.35"
-                tools:ignore="VisualLintButtonSize" />
+                tools:ignore="PxUsage,VisualLintButtonSize" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
@@ -244,6 +282,20 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="VisualLintButtonSize"
         tools:text="developer" />
+
+    <ImageView
+        android:id="@+id/developers_img"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/developers"
+        app:layout_constraintEnd_toEndOf="@+id/developers"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/developers"
+        app:layout_constraintTop_toTopOf="@+id/developers"
+        app:srcCompat="@drawable/developer" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/checkforupdates"

@@ -24,31 +24,40 @@
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action
+                    android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".handbook"
+            android:name=".handbook.handbook"
             android:exported="false"/>
         <activity
-            android:name=".OxygenFrameActivity"
+            android:name=".diver.OxygenFrameActivity"
             android:exported="false"/>
         <activity
-            android:name=".DecompressionFrameActivity"
+            android:name=".diver.DecompressionFrameActivity"
             android:exported="false" />
         <activity
             android:name=".developer"
             android:exported="false"/>
         <activity
+            android:name=".BarometerFrameActivity"
+            android:exported="false"/>
+        <activity
             android:name=".CompassFrameActivity"
             android:exported="false"/>
         <activity
-            android:name=".aqua_frame"
+            android:name=".diver.aqua_frame"
             android:exported="false"/>
         <activity
-            android:name=".BarometerFrameActivity"
+            android:name=".handbook.MainActivityHandbook"
+            android:exported="false"/>
+        <activity
+            android:name=".handbook.Details"
+            android:exported="false"/>
+        <activity
+            android:name=".handbook.Image"
             android:exported="false"/>
 
         <meta-data

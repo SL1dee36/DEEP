@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1D1B20"
-    tools:context=".OxygenFrameActivity"
+    tools:context=".diver.OxygenFrameActivity"
     tools:ignore="HardcodedText,ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" >
 
 

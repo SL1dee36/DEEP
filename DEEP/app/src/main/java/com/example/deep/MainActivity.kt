@@ -26,30 +26,24 @@ import android.view.animation.Animation
 import android.view.animation.RotateAnimation
 import android.widget.ImageButton
 import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.content.getSystemService
+import com.example.deep.diver.aqua_frame
+import com.example.deep.handbook.MainActivityHandbook
+import com.example.deep.handbook.handbook
 import com.google.android.material.button.MaterialButton
 import org.json.JSONObject
 import java.io.IOException
 import java.net.URL
 import java.util.Locale
-import kotlin.math.pow
 
 class MainActivity : AppCompatActivity(), SensorEventListener {
 
     private var manager: SensorManager? = null
     private var currentDegree: Int = 0
     private val LOCATION_PERMISSION_REQUEST_CODE = 123
-
-    private lateinit var sensorManager: SensorManager
-    private var barometerSensor: Sensor? = null
-    private lateinit var pressureTextView: TextView
-
-    private val seaLevelPressure = 1013.25 // Стандартное давление на уровне моря (hPa)
 
     private lateinit var locationButton: MaterialButton
     private lateinit var refreshButton: ImageButton
@@ -71,14 +65,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         manager = getSystemService(SENSOR_SERVICE) as SensorManager
-
-        pressureTextView = findViewById(R.id.barometerButton)
-        sensorManager = getSystemService<SensorManager>()!!
-        barometerSensor = sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE)
-
-        if (barometerSensor == null) {
-            pressureTextView.text = "Барометр не найден"
-        }
 
         locationButton = findViewById(R.id.locationButton)
         refreshButton = findViewById(R.id.refreshButton)
@@ -107,6 +93,11 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     }
 
     fun startHandBookActivity(v: View) {
+        val intent = Intent(this, MainActivityHandbook::class.java)
+        startActivity(intent)
+    }
+
+    fun startOnlineHandBookActivity(v: View) {
         val intent = Intent(this, handbook::class.java)
         startActivity(intent)
     }
@@ -128,6 +119,10 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     fun startCheckForUpdate(v: View) {
         CheckUpdatesTask().execute()
+    }
+
+    fun startMainActivity(v: View) {
+        finish()
     }
 
     @SuppressLint("StaticFieldLeak")
@@ -204,16 +199,11 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             manager?.getDefaultSensor(Sensor.TYPE_ORIENTATION),
             SensorManager.SENSOR_DELAY_GAME
         )
-
-        barometerSensor?.also {
-            sensorManager.registerListener(this, it, SensorManager.SENSOR_DELAY_NORMAL)
-        }
     }
 
     override fun onPause() {
         super.onPause()
         manager?.unregisterListener(this)
-        sensorManager.unregisterListener(this)
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
@@ -232,17 +222,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         currentDegree = -degree
 
         imDinamic.startAnimation(rotationAnim)
-
-        if (event?.sensor?.type == Sensor.TYPE_PRESSURE) {
-            val pressure = event.values[0]
-            val altitude = calculateAltitude(pressure)
-
-            pressureTextView.text = "Давление: ≈${pressure} hPa\nВысота: ≈${String.format("%.2f", altitude)} м"
-        }
-    }
-
-    private fun calculateAltitude(pressure: Float): Float {
-        return (44330.0 * (1 - (pressure / seaLevelPressure).pow(0.1903))).toFloat()
     }
 
     private fun showLocation() {
@@ -327,6 +306,4 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show()
         locationButton.text = "Ошибка: $message"
     }
-
-
 }

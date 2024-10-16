@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1d1b20"
+    android:theme="@style/Theme.DEEP"
+    tools:context=".handbook.MainActivityHandbook">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/findeditText" />
+
+    <EditText
+        android:id="@+id/findeditText"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:hint="@string/hint_fiend"
+        android:inputType="text"
+        android:text="a"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backgroundBTN2"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:alpha="0.3"
+        android:backgroundTint="#312E35"
+        android:clickable="false"
+        android:fontFamily="@font/amethysta"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_btn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/amethysta"
+        android:onClick="handleBackButtonClick"
+        android:text="@string/backButton"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundBTN2"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundBTN2"
+        app:layout_constraintStart_toStartOf="@+id/backgroundBTN2"
+        app:layout_constraintTop_toTopOf="@+id/backgroundBTN2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

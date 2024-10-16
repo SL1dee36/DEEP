@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#1D1B20"
     android:backgroundTint="#1D1B20"
-    tools:context=".aqua_frame"
+    tools:context=".diver.aqua_frame"
     tools:ignore="HardcodedText,ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" >
 
 
