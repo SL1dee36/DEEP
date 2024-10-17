@@ -4,15 +4,15 @@
     <string name="deep">DEEP</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="backButton">Назад</string>
-    <string name="title_activity_details">Details</string>
+    <string name="title_activity_details">Описание</string>
     <string name="hint_fiend">Поиск</string>
     <string name="notes">Заметки:</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-    <string name="notesButton">Назад</string>
+    <string name="next">Следующий</string>
+    <string name="previous">Предыдущий</string>
+    <string name="notesButton">Сохранить</string>
 
     <string name="aqua">
         \n
