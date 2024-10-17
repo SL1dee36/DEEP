@@ -14,7 +14,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/deep_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_foreground"
+        android:roundIcon="@mipmap/deep"
         android:supportsRtl="true"
         android:theme="@style/Theme.DEEP"
         tools:targetApi="33">

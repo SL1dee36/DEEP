@@ -9,52 +9,15 @@
     tools:context=".MainActivity"
     tools:ignore="PxUsage,VisualLintButtonSize,HardcodedText,ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" >
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/TitleFrame"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:backgroundTint="#312E35"
-        android:clickable="false"
-        android:fontFamily="@font/amethysta"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="SpeakableTextPresentCheck,VisualLintButtonSize,VisualLintOverlap" />
-
-    <TextView
-        android:id="@+id/DEEP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="2dp"
-        android:fontFamily="@font/amethysta"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/deep"
-        android:textAlignment="center"
-        android:textSize="46sp"
-        app:layout_constraintBottom_toBottomOf="@+id/TitleFrame"
-        app:layout_constraintEnd_toEndOf="@+id/TitleFrame"
-        app:layout_constraintStart_toStartOf="@+id/TitleFrame"
-        app:layout_constraintTop_toTopOf="@+id/TitleFrame"
-        tools:ignore="TextSizeCheck"
-        tools:text="DEEP" />
-
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/developers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DEEP">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -62,25 +25,59 @@
             android:paddingHorizontal="0dp">
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/TitleFrame"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#312E35"
+                android:clickable="false"
+                android:fontFamily="@font/amethysta"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck,VisualLintButtonSize,VisualLintOverlap" />
+
+            <TextView
+                android:id="@+id/DEEP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:fontFamily="@font/amethysta"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/deep"
+                android:textAlignment="center"
+                android:textSize="38sp"
+                app:layout_constraintBottom_toBottomOf="@+id/TitleFrame"
+                app:layout_constraintEnd_toEndOf="@+id/TitleFrame"
+                app:layout_constraintStart_toStartOf="@+id/TitleFrame"
+                app:layout_constraintTop_toTopOf="@+id/TitleFrame"
+                tools:ignore="TextSizeCheck"
+                tools:text="DEEP" />
+
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/locationButton"
                 android:layout_width="0dp"
 
                 android:layout_height="180dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginEnd="10dp"
+                android:layout_marginTop="40dp"
                 android:text="🌍 Проверить местоположение"
-                android:textSize="32px"
                 android:textAlignment="center"
                 android:textColor="@color/white"
+                android:textSize="32px"
                 app:backgroundTint="#312E35"
                 app:cornerRadius="10dp"
                 app:layout_constraintEnd_toStartOf="@+id/compass"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TitleFrame"
                 tools:ignore="VisualLintButtonSize"
                 tools:text="Show Location" />
-
 
             <ImageButton
                 android:id="@+id/refreshButton"
@@ -121,15 +118,15 @@
 
 
                 android:layout_height="180dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginEnd="10dp"
-                app:layout_constraintWidth_percent="0.40"
                 android:onClick="startCompassActivity"
                 android:textColor="@color/white"
                 app:backgroundTint="#312E35"
                 app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TitleFrame"
+                app:layout_constraintWidth_percent="0.40"
                 tools:ignore="DuplicateClickableBoundsCheck,VisualLintButtonSize,VisualLintOverlap"
                 tools:text="compass" />
 
@@ -180,15 +177,15 @@
                 android:id="@+id/handbook"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
-                android:gravity="end|center"
-
                 android:layout_marginStart="30dp"
+
                 android:layout_marginEnd="10dp"
+                android:gravity="end|center"
                 android:onClick="startHandBookActivity"
                 android:text="Локальный\n      справочник"
                 android:textColor="@color/white"
-                app:backgroundTint="#312E35"
                 android:textSize="32px"
+                app:backgroundTint="#312E35"
                 app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -219,9 +216,9 @@
                 android:gravity="end|center"
                 android:onClick="startOnlineHandBookActivity"
                 android:text="Онлайн\n      справочник"
+                android:textSize="32px"
                 app:backgroundTint="#312E35"
                 app:cornerRadius="10dp"
-                android:textSize="32px"
 
                 app:layout_constraintStart_toEndOf="@+id/barometerButton"
                 app:layout_constraintTop_toBottomOf="@+id/aqua"
@@ -249,9 +246,9 @@
                 android:gravity="fill"
                 android:onClick="startBarometerActivity"
                 android:text="Барометр"
+                android:textSize="32px"
                 app:backgroundTint="#312E35"
                 app:cornerRadius="10dp"
-                android:textSize="32px"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
