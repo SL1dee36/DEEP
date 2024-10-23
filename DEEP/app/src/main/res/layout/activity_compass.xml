@@ -11,58 +11,24 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/CompassFrame"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
         android:backgroundTint="#29262D"
         android:clickable="false"
         android:fontFamily="@font/amethysta"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.5"
         tools:ignore="SpeakableTextPresentCheck" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/backgroundBTN2"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:alpha="0.3"
-        android:backgroundTint="#35313A"
-        android:clickable="false"
-        android:fontFamily="@font/amethysta"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/back_btn"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:fontFamily="@font/amethysta"
-        android:onClick="startMainActivity"
-        android:text="Назад"
-        android:textColor="@color/white"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/backgroundBTN2"
-        app:layout_constraintEnd_toEndOf="@+id/backgroundBTN2"
-        app:layout_constraintStart_toStartOf="@+id/backgroundBTN2"
-        app:layout_constraintTop_toTopOf="@+id/backgroundBTN2" />
 
     <ImageView
         android:id="@+id/compass_bg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/CompassFrame"
         app:layout_constraintEnd_toEndOf="@+id/CompassFrame"
         app:layout_constraintStart_toStartOf="@+id/CompassFrame"
@@ -71,62 +37,47 @@
 
     <ImageView
         android:id="@+id/compass_dynamic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/compass_bg"
         app:layout_constraintEnd_toEndOf="@+id/compass_bg"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/compass_bg"
         app:layout_constraintTop_toTopOf="@+id/compass_bg"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/m_compass_black" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/backgroundText"
+        android:id="@+id/locationButton"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:alpha="0.3"
+        android:layout_marginBottom="10dp"
         android:backgroundTint="#35313A"
-        android:clickable="false"
+        android:text="Ваше Местоположение"
+        android:textSize="20sp"
         android:fontFamily="@font/amethysta"
         app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CompassFrame"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="SpeakableTextPresentCheck" />
 
-
-    <TextView
-        android:id="@+id/locationInfo"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        android:fontFamily="@font/alata"
-        android:gravity="center"
-        android:text="location\ninfo"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/backgroundText2"
-        app:layout_constraintEnd_toEndOf="@+id/backgroundText2"
-        app:layout_constraintStart_toStartOf="@+id/backgroundText2"
-        app:layout_constraintTop_toTopOf="@+id/backgroundText2" />
-
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/backgroundText2"
+        android:id="@+id/DegreesBackground"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:alpha="0.3"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
         android:backgroundTint="#35313A"
         android:clickable="false"
         android:fontFamily="@font/amethysta"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backgroundText"
+        app:layout_constraintTop_toTopOf="@+id/CompassFrame"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
@@ -139,11 +90,12 @@
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/white"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="@+id/backgroundText"
-        app:layout_constraintEnd_toEndOf="@+id/backgroundText"
-        app:layout_constraintStart_toStartOf="@+id/backgroundText"
-        app:layout_constraintTop_toTopOf="@+id/backgroundText"
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/DegreesBackground"
+        app:layout_constraintEnd_toEndOf="@+id/DegreesBackground"
+        app:layout_constraintStart_toStartOf="@+id/DegreesBackground"
+        app:layout_constraintTop_toTopOf="@+id/DegreesBackground"
         tools:gravity="center" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
