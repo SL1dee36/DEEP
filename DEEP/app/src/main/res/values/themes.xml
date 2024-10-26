@@ -11,6 +11,7 @@
         <item name="colorPrimary">@color/my_dark_purple</item>
         <!-- Цвет текста/иконок на основной поверхности -->
         <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="strokeColor">@color/deepnight</item>
 
         <!-- Другие атрибуты, как и раньше -->
         <item name="colorButtonNormal">#808080</item>
@@ -25,4 +26,5 @@
 
     <!-- Определение ресурса цвета -->
     <color name="my_dark_purple">#1d1b20</color>
+    <color name="deepnight">#837A90</color>
 </resources>
