@@ -77,17 +77,20 @@
                     android:layout_marginTop="5dp"
                     android:textColor="@color/white"
                     android:text="@string/notes"
-                    android:textSize="25sp"
+                    android:textSize="48px"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/SaveNotes"
+                    app:strokeWidth="1dp"
+                    android:backgroundTint="#35313A"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
                     android:text="@string/notesButton"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -110,8 +113,11 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/light_white_text"
-                android:text="TextView" />
+                android:textSize="48px"
+                android:layout_marginHorizontal="5dp"
+                android:text="Описание"
+                android:textColor="@color/white"
+                tools:text="Описание" />
 
             <TextView
                 android:id="@+id/textFullDesc"
@@ -130,10 +136,13 @@
 
     <Button
         android:id="@+id/buttonBack"
+        android:clickable="false"
+        android:alpha="0"
+        android:backgroundTint="@color/dark_surface_variant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="Back"
+        android:text="@string/backButton"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

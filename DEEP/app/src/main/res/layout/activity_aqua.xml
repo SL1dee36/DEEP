@@ -30,6 +30,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/backgroundBTN"
         android:layout_width="0dp"
+
         android:layout_height="140dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="60dp"
@@ -38,37 +39,35 @@
         android:clickable="false"
         android:fontFamily="@font/amethysta"
         app:cornerRadius="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/back_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DEEP"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
+        app:strokeWidth="1dp"
         tools:ignore="SpeakableTextPresentCheck,VisualLintButtonSize" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/backgroundBTN4"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="60dp"
+        android:layout_height="220dp"
+        android:layout_margin="10dp"
         android:backgroundTint="#242228"
         android:clickable="false"
         android:fontFamily="@font/amethysta"
         app:cornerRadius="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/back_btn"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:strokeWidth="1dp"
 
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/backgroundBTN"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="SpeakableTextPresentCheck" />
 
 
     <ScrollView
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="200dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -85,24 +84,6 @@
             android:text="@string/aqua" />
 
     </ScrollView>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/backgroundBTN2"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:alpha="0.3"
-        android:backgroundTint="#35313A"
-        android:clickable="false"
-        android:fontFamily="@font/amethysta"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck,VisualLintButtonSize,VisualLintOverlap" />
 
     <TextView
         android:id="@+id/textView"
@@ -158,23 +139,5 @@
         app:layout_constraintStart_toStartOf="@+id/backgroundBTN"
         tools:ignore="VisualLintButtonSize" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/back_btn"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/amethysta"
-        android:onClick="startMainActivity"
-        android:text="Назад"
-        android:textColor="@color/white"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/backgroundBTN2"
-        app:layout_constraintEnd_toEndOf="@+id/backgroundBTN2"
-        app:layout_constraintStart_toStartOf="@+id/backgroundBTN2"
-        app:layout_constraintTop_toTopOf="@+id/backgroundBTN2"
-        tools:ignore="VisualLintButtonSize" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

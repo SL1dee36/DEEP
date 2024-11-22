@@ -6,7 +6,7 @@
     android:thickness="3dp"
     android:useLevel="false">
     <solid
-        android:color="#bebebe">
+        android:color="#70b3ff">
     </solid>
     <size
         android:height="12dp"

@@ -25,9 +25,10 @@
 
     </LinearLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonBackFull"
-        android:layout_width="80dp"
+        app:strokeWidth="1dp"
+        android:layout_width="120dp"
         android:layout_height="40dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
@@ -36,7 +37,7 @@
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextSizeCheck" />
+        tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

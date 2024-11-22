@@ -11,8 +11,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="8dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
         android:backgroundTint="#312E35"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,19 +22,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="#312E35"
-            android:padding="5dp"
+            android:padding="8dp"
             app:cornerRadius="10dp">
 
 
             <ImageView
                 android:id="@+id/imageTitle"
                 app:cornerRadius="10dp"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                app:srcCompat="@drawable/ic_launcher_background"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textTitle"
@@ -48,7 +49,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageTitle"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.06999999" />
+                app:layout_constraintVertical_bias="0.06999999"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:textColor="@color/light_white_text"
@@ -62,7 +64,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageTitle"
                 app:layout_constraintTop_toBottomOf="@+id/textTitle"
-                app:layout_constraintVertical_bias="0.13" />
+                app:layout_constraintVertical_bias="0.13"
+                tools:ignore="HardcodedText" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
